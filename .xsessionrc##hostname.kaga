@@ -1,0 +1,31 @@
+#if [[ \! -r ~/.number_of_screens ]]
+#then
+#    echo Number of screens is 1
+#else
+#    echo Number of screens is $(egrep -v '^\s*#' ~/.number_of_screens)
+#fi
+
+#(sleep 10; devmon&)&
+# No console beeps ever, anywhere, at all
+xset b off
+
+#xscreensaver -nosplash &
+#gnome-screensaver&
+echo "Hi from .xsessionrc foo at " $(date) >> ~/myxsession.log
+
+# Per-whatever configs
+sys=`uname -o`
+test -f ~/.xsessionrc.d/$sys &&  . ~/.xsessionrc.d/$sys
+
+# Per-location configs
+junk=${SSMM_LOC:?}              # Make sure it's defined (from .bash_profile)
+test -f ~/.xsessionrc.d/$SSMM_LOC &&  . ~/.xsessionrc.d/$SSMM_LOC
+
+# per http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=597937
+export CKCON_X11_DISPLAY_DEVICE=/dev/tty7
+
+# Per-machine configs
+name=`uname -n`
+test -f ~/.xsessionrc.d/$name &&  . ~/.xsessionrc.d/$name
+
+#exec ck-launch-session awesome
