@@ -1,0 +1,3 @@
+alias ts7200='. $HOME/bin/ts7200'
+alias newpods='. $HOME/bin/newpods'
+alias lp='lp -d HP_Laserjet_1320_series -h chen'

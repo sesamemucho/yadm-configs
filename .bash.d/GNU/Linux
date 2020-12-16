@@ -1,0 +1,25 @@
+is_running()
+{
+    a=`ps -C $1 | tail --lines=+2 | head -1 | awk '{print $1 "  " $4}'`
+    test -n "$a"
+}
+
+alias get_vars_func='unset GV_OOPSIE; get_vars_x=$(~/bin/get_vars); eval "$get_vars_x"; unset get_vars_x'
+if [[ SHLVL -lt 2 ]]
+then
+    get_vars_func
+fi
+
+function ect {
+    emacsclient --socket-name /run/user/1000/emacs/server -t "$@"
+}
+
+function ecc {
+    emacsclient --socket-name /run/user/1000/emacs/server -c "$@"
+}
+
+export EDITOR=ect
+
+# Local Variables:
+# mode: shell-script
+# End:
