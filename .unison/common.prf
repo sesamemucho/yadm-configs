@@ -1,0 +1,24 @@
+ignore = Name #*#
+ignore = Name *~
+ignore = Name .*~
+ignore = Name *.o
+ignore = Name *.tmp
+ignore = Name *.elc
+ignore = Name *.pyc
+
+ignore = Path .unison/??????????????????????????????????
+ignore = Path .unison/*.log
+
+ignore = Path {unison.log}
+ignore = Path .emacs.d/elpa/gnupg/S.*
+ignore = Path .gnupg/S.*
+
+ignore = Path {.emacs.d/projectile-bookmarks.eld}
+ignore = Path .emacs.d/recentf
+ignore = Path .emacs.d/smex-items
+
+ignore = Path .lastpass
+
+ignore = Path .cache
+ignore = Path .local/share/Zeal
+ignore = Name *_socket

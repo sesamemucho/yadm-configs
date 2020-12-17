@@ -1,0 +1,8 @@
+watch = false
+
+root = /home/bob
+root = ssh://ohta//home/bob
+
+include common
+
+ignore = Path Projects/src
