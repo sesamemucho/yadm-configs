@@ -22,3 +22,5 @@ ignore = Path .lastpass
 ignore = Path .cache
 ignore = Path .local/share/Zeal
 ignore = Name *_socket
+
+include ignore-yadm
