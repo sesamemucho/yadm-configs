@@ -76,6 +76,7 @@ test -f ~/.bash.d/$SSMM_LOC &&  . ~/.bash.d/$SSMM_LOC
 name=`uname -n`
 test -f ~/.bash.d/$name &&  . ~/.bash.d/$name
 
+#listmunge PATH $HOME/.local/bin after
 
 vterm_printf(){
     if [ -n "$TMUX" ]; then

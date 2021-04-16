@@ -1,3 +1,4 @@
+servercmd = ../../snap/bin/unison-jz.unison -ui text
 watch = false
 
 root = /home/bob

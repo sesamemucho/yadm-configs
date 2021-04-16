@@ -1,5 +1,3 @@
-listmunge PATH $HOME/.local/bin
-
 export TERM=xterm-256color
 
 export SSH_ASKPASS=/usr/lib/ssh/ssh-askpass
